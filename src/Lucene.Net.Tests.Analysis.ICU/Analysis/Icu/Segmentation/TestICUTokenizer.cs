@@ -157,7 +157,7 @@ namespace Lucene.Net.Analysis.Icu.Segmentation
         }
 
         [Test]
-        public void TestMyanmar() 
+        public void TestMyanmar()
         {
             AssertAnalyzesTo(a, "သက်ဝင်လှုပ်ရှားစေပြီး", new String[] { "သက်ဝင်", "လှုပ်ရှား", "စေ", "ပြီး" });
         }
@@ -167,6 +167,8 @@ namespace Lucene.Net.Analysis.Icu.Segmentation
         {
             AssertAnalyzesTo(a, "การที่ได้ต้องแสดงว่างานดี. แล้วเธอจะไปไหน? ๑๒๓๔",
                 new string[] { "การ", "ที่", "ได้", "ต้อง", "แสดง", "ว่า", "งาน", "ดี", "แล้ว", "เธอ", "จะ", "ไป", "ไหน", "๑๒๓๔" });
+            AssertAnalyzesTo(a, "กล่องใส่รองเท้า ใส่ของอเนกประสงค์เปิดฝาด้านหน้า เนื้อพลาสติกแข็งชนิดเดียวกับแฟ้มหูหิ้ว",
+                new string[] { "กล่อง", "ใส่", "รองเท้า", "ใส่", "อเนกประสงค์", "ฝา", "หน้า", "เนื้อ", "พลาสติก", "แข็ง", "ชนิด", "แฟ้ม", "หู", "หิ้ว" });
         }
 
         [Test]
